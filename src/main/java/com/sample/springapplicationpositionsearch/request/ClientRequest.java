@@ -1,5 +1,6 @@
 package com.sample.springapplicationpositionsearch.request;
 
+import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,8 +19,10 @@ public class ClientRequest {
 
     @NotBlank(message = "Name cannot be empty")
     @Size(max = 100, message = "Name must be less than 51 characters")
+    @ApiModelProperty(value = "Name of the client", required = true, example = "John Doe")
     private String name;
     @NotBlank(message = "Name cannot be empty")
     @Pattern(regexp = REGEX, message = "Invalid email format")
+    @ApiModelProperty(value = "Email of the client", required = true, example = "john.doe@example.com")
     private String email;
 }

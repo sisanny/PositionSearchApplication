@@ -8,7 +8,7 @@ import lombok.Getter;
 public enum FieldName {
     EMAIL("email"),
     ID("id"),
-    API_KEY("x-api-key");
+    API_KEY("apiKey");
 
     private final String value;
 }

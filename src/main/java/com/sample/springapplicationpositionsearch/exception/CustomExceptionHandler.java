@@ -35,7 +35,7 @@ public class CustomExceptionHandler {
     public ResponseEntity<CustomError> handleConstraintViolationException(ConstraintViolationException ex) {
         Map<String, String> errorMap = new HashMap<>();
         for (ConstraintViolation<?> violation : ex.getConstraintViolations()) {
-            String field = violation.getPropertyPath().toString();
+            String field = violation.getPropertyPath().toString().split("\\.")[1];
             String message = violation.getMessage();
             errorMap.put(field, message);
         }
@@ -45,7 +45,7 @@ public class CustomExceptionHandler {
     @ExceptionHandler(CustomException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ResponseBody
-    public ResponseEntity<CustomError> handleBusinessException(CustomException ex) {
+    public ResponseEntity<CustomError> handleCustomException(CustomException ex) {
         Map<String, String> errorMap = new HashMap<>();
         errorMap.put(ex.getField().getValue(), ex.getMessage());
         return ResponseEntity.badRequest().body(new CustomError(errorMap));
