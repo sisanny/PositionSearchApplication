@@ -26,8 +26,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("My API")
-                .description("API for my application")
+                .title("Position Search Application")
+                .description("You can try out the APIs in the application")
                 .version("1.0.0")
                 .build();
     }

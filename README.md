@@ -39,7 +39,7 @@
    ```
 
    Az alkalmazásunk most már fut, és elérhető a `localhost:8080` webcímen.
-
+   Az alkalmazás dokumentációja megtekinthető a Swagger UI-n keresztül: http://localhost:8080/swagger-ui/index.html#
 
 
 ## Ahhoz, hogy deployment ready legyen az alkalmazás, a következő lépésekre van szükség: ##

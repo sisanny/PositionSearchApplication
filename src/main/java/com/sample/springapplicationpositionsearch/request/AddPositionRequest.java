@@ -17,5 +17,6 @@ public class AddPositionRequest {
     private String title;
     @NotBlank(message = "Location cannot be empty")
     @Size(max = 50, message = "Location must be less than 51 characters")
+    @ApiModelProperty(value = "Location of the job", example = "Budapest")
     private String location;
 }
