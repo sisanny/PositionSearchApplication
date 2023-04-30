@@ -35,7 +35,7 @@
 
    ```
    mvn clean install
-   java -jar target/spring-application-position-search-0.0.1-SNAPSHOT.jar.jar
+   java -jar target/spring-application-position-search-0.0.1-SNAPSHOT.jar
    ```
 
    Az alkalmazásunk most már fut, és elérhető a `localhost:8080` webcímen.
